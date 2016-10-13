@@ -1,1 +1,14 @@
-%h2 The Houses of Westeros
+.houses
+  - @houses.each do |house|
+    .house
+      .header
+        %h2
+          = link_to house.name, house_path(house)
+          %span{class: 'words'}= house.words
+      .details
+        .left
+          %ul
+            %li= "Seat: #{house.seat}"
+            %li= "Region: #{house.region}"
+        .right
+          = image_tag house.img_url

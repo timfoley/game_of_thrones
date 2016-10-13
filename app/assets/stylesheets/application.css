@@ -15,8 +15,13 @@
  */
 
 h1, h2, h3 {
-  font-family: Eczar, serif;
+  font-family: 'Eczar', serif;
   font-weight: normal;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
 }
 
 body {
