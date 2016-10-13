@@ -1,0 +1,21 @@
+.house-show
+  .house
+    .header
+      %h2
+        = @house.name
+        %span{class: 'words'}= @house.words
+    .details
+      .left
+        %p= "Seat: #{@house.seat}"
+        %p= "Region: #{@house.region}"
+        .edit= link_to 'Edit House', edit_house_path(@house)
+        .delete= link_to 'Delete', house_path(@house), method: :delete
+      .right
+        = image_tag @house.img_url
+  .roster
+    %h2= "#{@house.name} People: "
+    %ul
+      - @house.characters.each do |char|
+        %li= link_to char.name, house_character_path(char)
+    .add
+      = link_to 'Add Person', new_house_character_path(@house)
