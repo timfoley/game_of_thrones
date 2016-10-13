@@ -16,6 +16,6 @@
     %h2= "#{@house.name} People: "
     %ul
       - @house.characters.each do |char|
-        %li= link_to char.name, house_character_path(char)
+        %li= link_to char.name, character_path(char)
     .add
       = link_to 'Add Person', new_house_character_path(@house)

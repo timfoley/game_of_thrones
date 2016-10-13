@@ -1,0 +1,12 @@
+.content
+  .character-show
+    %h1= @character.name
+    .details
+      .img
+        = image_tag @character.img_url
+      .bio
+        .quote= @character.quote
+    .links
+      = link_to 'Back', house_path(@character.house)
+      = link_to 'Edit', edit_house_character_path(@character)
+      = link_to 'Delete', house_character_path(@character), method: :delete

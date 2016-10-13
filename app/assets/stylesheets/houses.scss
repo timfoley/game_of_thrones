@@ -24,6 +24,7 @@
 
   .roster {
     flex: 1 0 auto;
+    padding: 20px;
   }
 }
 
@@ -67,4 +68,29 @@
     flex: 1 0 auto;
   }
 
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+.character-show {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  .details {
+    display: flex;
+
+    .img {
+
+    }
+
+    .bio {
+      padding: 20px;
+    }
+  }
 }

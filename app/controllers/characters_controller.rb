@@ -32,9 +32,10 @@ class CharactersController < ApplicationController
 
   def destroy
     @character = Character.find(params[:id])
+    @house = @character.house
     @character.destroy
 
-    redirect_to characters_path
+    redirect_to house_path(@house)
   end
 
   # strong params
