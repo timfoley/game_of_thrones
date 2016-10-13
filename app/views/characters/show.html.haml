@@ -8,5 +8,5 @@
         .quote= @character.quote
     .links
       = link_to 'Back', house_path(@character.house)
-      = link_to 'Edit', edit_house_character_path(@character)
-      = link_to 'Delete', house_character_path(@character), method: :delete
+      = link_to 'Edit', edit_house_character_path(@character.house, @character)
+      = link_to 'Delete', house_character_path(@character.house, @character), method: :delete

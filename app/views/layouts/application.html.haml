@@ -8,5 +8,7 @@
     %link{href: "https://fonts.googleapis.com/css?family=Eczar:400,700|Gentium+Basic:400,400i,700", rel: "stylesheet"}
 
   %body
-    %h1 Welcome to Westeros!
+    %h1
+      Welcome to
+      = link_to 'Westeros!', houses_path
     = yield

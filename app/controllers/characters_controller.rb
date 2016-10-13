@@ -10,17 +10,19 @@ class CharactersController < ApplicationController
   end
 
   def new
-    @character = Character.new
+    @house = House.find(params[:house_id])
+    @character = @house.characters.new
   end
 
   def create
-    @character = Character.create(character_params)
+    @house = House.find(params[:house_id])
+    @character = @house.characters.create(character_params)
 
-    redirect_to character_path(@character)
+    redirect_to house_path(@character.house)
   end
 
   def edit
-    @character = Character.find(params[:id])
+    @character = House.find(params[:house_id]).characters.find(params[:id])
   end
 
   def update
